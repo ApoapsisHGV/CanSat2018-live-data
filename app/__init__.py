@@ -4,7 +4,7 @@ import psycopg2
 
 app = flask.Flask(__name__)
 
-def create_app(config=RunConfig):
+def create_app(config_class=RunConfig):
     app.config.from_object(config_class)
     conn = psycopg2.connect(
         database=app.config["URL"].path[1:],
