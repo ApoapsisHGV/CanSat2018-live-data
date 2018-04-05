@@ -18,6 +18,8 @@ def dust_api():
     dust_average = (float(sensor_values[0]["value"]) +
                     float(sensor_values[1]["value"])) / 2
 
+    print(get_lowest_density())
+    print(get_highest_density())
     if dust_average > get_highest_density()[0]:
         set_highest_density(dust_average, datetime.datetime.now())
     elif dust_average < get_lowest_density()[0]:
