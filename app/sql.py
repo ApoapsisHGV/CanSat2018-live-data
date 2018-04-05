@@ -23,9 +23,9 @@ def set_highest_density(value, date):
 
 def set_lowest_density(value, date):
     app.config["CUR"].execute(("UPDATE sensordata SET value=%s, date=%s"
-                               "WHERE ID=2;"), value, date)
+                               "WHERE ID=2;"), (value, date,))
 
 
 def set_latest_density(value, date):
     app.config["CUR"].execute(("UPDATE sensordata SET value=%s, date=%s"
-                               "WHERE ID=3;"), value, date)
+                               "WHERE ID=3;"), (value, date,))
