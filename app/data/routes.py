@@ -1,6 +1,11 @@
 from app.data import bp
-from flask import request
+from app.sql import get_highest_density, get_latest_density, get_lowest_density
 
-@bp.route("/data.html")
+from flask import jsonify
+
+
+@bp.route("/data")
 def data_provider():
-    return ""
+    return jsonify({"latest": get_latest_density(),
+                    "highest": get_highest_density(),
+                    "lowest": get_lowest_density()})

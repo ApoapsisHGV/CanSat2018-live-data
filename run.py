@@ -1,4 +1,5 @@
 from app import create_app
+
 from config import RunConfig
 
 app = create_app(RunConfig)

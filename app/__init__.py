@@ -1,8 +1,12 @@
-import flask
 from config import RunConfig
+
+import flask
+
 import psycopg2
 
+
 app = flask.Flask(__name__)
+
 
 def create_app(config_class=RunConfig):
     app.config.from_object(config_class)
