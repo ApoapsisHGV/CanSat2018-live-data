@@ -12,7 +12,7 @@ def get_lowest_density():
 
 
 def get_latest_density():
-    app.config["CUR"].execute("SELECT value FROM sensordata WHERE ID=3;")
+    app.config["CUR"].execute("SELECT value, date FROM sensordata WHERE ID=3;")
     return app.config["CUR"].fetchall()[0]
 
 
