@@ -20,6 +20,7 @@ def dust_api():
 
     print(get_lowest_density())
     print(get_highest_density())
+    print(dust_average)
     if dust_average > get_highest_density()[0]:
         set_highest_density(dust_average, datetime.datetime.now())
     elif dust_average < get_lowest_density()[0]:
